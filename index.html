@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React + TS</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // const asynchrouns = () => {
+      // //   setTimeout(() => {
+      // //     console.log("1");
+          
+      // //   }, 1000);
+      // //   console.log("2");
+      // //   console.log("3");
+      // }
+      // asynchrouns();
+
+      
+      const asynchrouns = () => {
+        console.log("Nguyễn Văn A");
+        
+      //   setTimeout(() => {
+      //     console.log("1");
+          
+      //   }, 1000);
+      //   console.log("2");
+      //   console.log("3");
+      };
+      const demoCallBack = (callback) => {
+        setTimeout(() => {
+          callback();
+        }, 1000);
+      }
+      console.log("1");
+      
+      demoCallBack(asynchrouns);
+
+      // tso promise
+      // const myPromise = new Promise((resolve, reject) => {
+      //   if(true){
+      //     resolve("Nguyễn Văn A");
+      //   } else {
+      //     reject("lỗi xảy ra");
+      //   }
+      // })
+      // console.log(myPromise);
+
+      // const myPromise = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     if(true){
+      //       resolve("Nguyễn Văn A");
+      //     } else {
+      //       reject("lỗi xảy ra");
+      //     }
+      //   }, 2000);
+      // })
+      // console.log(myPromise);
+      // // triển khai promise
+      // promise.then((result) => {
+      //   console.log("result");
+        
+      // })
+      // .catch((error) => {
+      //   console.log("error", error);
+        
+      // })
+      // .finally(() => {
+      //   // dọn dẹp bộ nhớ , tắt casc hiệu ứng
+      //   console.log("hoàn thành chuong trình");
+        
+      // });
+
+      // const delayStep = (stepName, delay) => {
+      //   return new Promise((resolve) => {
+      //     setTimeout(() => {
+      //       console.log(`hoàn thành ${stepName}`);
+      //       resolve(stepName);
+      //     }, delay);
+      //   });
+      // };
+      // delayStep("bước 1", 1000)
+      // .then((result1) => {
+      //   console.log("hoàn thành", result1);
+      //   return delayStep("bước 2", 1000);
+      // })
+      // .then((result2) => {
+      //   console.log("hoàn thành", result2);
+      //   return delayStep("bước 3", 1000);
+      // })
+      // .then((result3) => {
+      //   console.log("hoàn thành promise", result3);
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // });
+      
+
+      // const task = (taskName, delay, shoulFail = false) => {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       if(shoulFail){
+      //         reject(`${taskName} thất bại`);
+      //       }else {
+      //         resolve(`hoàn thành ${taskName}`);
+      //       }
+      //     }, delay);
+      //   })
+      // }
+      // const promise1 = task("tác vụ 1", 1000);
+      // const promise2 = task("tác vụ 1", 500);
+      // const promise3 = task("tác vụ 1", 300, true);
+      // Promise.all([promise1, promise2, promise3])
+      // .then((result) => {
+      //   console.log("hoàn thành ",result);
+        
+      // })
+      // .catch((error) => {
+      //   console.log(error)
+        
+      // })
+
+
+      // const promise1 = new Promise((_, reject) => 
+      // setTimeout(reject, 3000, "lỗi"
+      // ))
+      // const promise2 = new Promise((resolve) => 
+      // setTimeout(resolve, 1000, "hoàn thành 02")
+      // )
+      // const promise3 = new Promise((resolve) => 
+      // setTimeout(resolve, 500, "hoàn thành 03")
+      // )
+      // Promise.race([promise1, promise2, promise3])
+      // .then((result) => {
+      //   console.log('ket quả', result);
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+        
+      // })
+
+
+    //   const promise1 = new Promise((
+    //     _, reject
+    //   ) => setInterval(reject, 300, "lỗi"))
+    //   const promise2 = new Promise((resolve) => 
+    //   setTimeout(resolve, 500, "dữ liệu trả về 02")
+    // )
+    //   const promise3 = new Promise((resolve) => 
+    //   setTimeout(resolve, 10000, "dữ liệu trả về 03")
+    // )
+    //   Promise.any([promise1, promise2, promise3])
+    //   .then((result) => {
+    //     console.log('ket quả', result);
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
+
+
+    // const promise = () => {
+    //   return new Promise((resolve, reject) => {
+    //     setTimeout(resolve, 1000, "lấy dữ liệu thành coong bại");
+    //   })
+    // }
+    // const fetchData = async() => {
+    //   try{
+    //     const data = await promise();
+    //     console.log(data);
+
+    //   }catch(error){
+    //     console.error(error);
+        
+    //   } finally {
+    //     console.log("hoàn thành");
+    //   }
+    // };
+    // fetchData();
+    
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

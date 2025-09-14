@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const delay = (ms) => {
+            return new Promise((resolve) => (
+                setTimeout(resolve, ms)
+            ))
+
+        }
+        const runTask = async () => {
+            console.log("run task");
+            await delay(100)
+            console.log("task 1 ");
+
+            console.log("run task");
+            await delay(3000)
+            console.log("task 2 ");
+
+            console.log("run task");
+            await delay(1500)
+            console.log("task 3 ");
+            
+        }
+        const para = () => {
+            const taskA = delay(1000);
+            const taskB = delay(2000);
+            Promise.all([taskA, taskB])
+            .then((res) => console.log("res", res))
+            .catch((error) => console.log("e". error));
+        }
+        para();
+        const fetchData = () => {
+            return new Promise((resolve, reject) => {
+                const result = Math.random() > 0.5;
+                setTimeout(() => {
+                    if(result){
+                        resolve({data: "succes"})
+                    }else {
+                        reject("netword error");
+                    }
+                }, Math.ceil(Math.random() * 1000));
+            })
+        }
+        const handleData = async () => {
+            try {
+               const result = await fetchData();
+               console.log("result", result);
+                
+            } catch (error) {
+                console.log("erorr", error);
+                
+            }
+        }
+        handleData();
+    </script>
+</body>
+</html>
